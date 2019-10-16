@@ -1,0 +1,23 @@
+.form-content {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  padding: 2em;
+  border: solid;
+}
+
+.back-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+}
+
+.back-button > button {
+  width: 100%;
+}
+
+h1 {
+  margin: 1em;
+}

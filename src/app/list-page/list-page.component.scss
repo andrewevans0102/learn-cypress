@@ -1,0 +1,47 @@
+.value {
+  width: 10em;
+}
+
+.value-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  margin: 1em;
+}
+
+.create-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.create-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2em;
+  border: solid;
+}
+
+.back-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+}
+
+.back-button > button {
+  width: 100%;
+}
+
+.list-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 1em;
+}

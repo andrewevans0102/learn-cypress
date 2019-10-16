@@ -1,0 +1,62 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>List Page</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="create-form">
+        <form>
+          <div class="form-group">
+            <input
+              class="form-control"
+              id="exampleInputEmail1"
+              placeholder="Value"
+              [(ngModel)]="createValue"
+              name="createValue"
+            />
+          </div>
+        </form>
+        <div class="create-button">
+          <button type="button" class="btn btn-success" (click)="create()">
+            create value
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="list-content">
+        <ul class="list-group" *ngFor="let listValue of listValues">
+          <li class="list-group-item">
+            <div class="value-row">
+              <div class="value">{{ listValue }}</div>
+              <button
+                type="button"
+                class="btn btn-danger"
+                (click)="delete(listValue)"
+              >
+                Delete
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="back-button">
+        <button
+          type="button"
+          class="btn btn-danger"
+          (click)="goToContentPage()"
+        >
+          Back
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
