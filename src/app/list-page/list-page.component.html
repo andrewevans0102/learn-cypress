@@ -14,14 +14,19 @@
           <div class="form-group">
             <input
               class="form-control"
-              id="exampleInputEmail1"
+              id="createInput"
               placeholder="Value"
               [(ngModel)]="createValue"
               name="createValue"
             />
           </div>
           <div class="create-button">
-            <button type="button" class="btn btn-success" (click)="create()">
+            <button
+              type="button"
+              class="btn btn-success"
+              (click)="create()"
+              id="createButton"
+            >
               create value
             </button>
           </div>

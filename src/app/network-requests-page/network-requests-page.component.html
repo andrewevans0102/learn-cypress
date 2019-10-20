@@ -30,6 +30,7 @@
               type="button"
               class="btn btn-primary"
               (click)="showDetails()"
+              id="detailsButton"
             >
               show details
             </button>
@@ -54,7 +55,7 @@
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">Movie Title</h5>
           </div>
-          <p class="mb-1">
+          <p class="mb-1" id="movieTitle">
             {{ movieData.title }}
           </p>
         </div>
@@ -64,7 +65,7 @@
           <div class="d-flex w-100 justify-content-between">
             <h5 class="mb-1">Episode</h5>
           </div>
-          <p class="mb-1">
+          <p class="mb-1" id="episodeNumber">
             {{ movieData.episode_id }}
           </p>
         </div>
