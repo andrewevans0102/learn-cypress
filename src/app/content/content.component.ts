@@ -15,7 +15,11 @@ export class ContentComponent implements OnInit {
     this.router.navigateByUrl('/list-page');
   }
 
-  goToFormPage() {
-    this.router.navigateByUrl('/form-page');
+  goToNetworkRequestsPage() {
+    this.router.navigateByUrl('/network-requests-page');
+  }
+
+  goToFormsPage() {
+    this.router.navigateByUrl('/forms-page');
   }
 }

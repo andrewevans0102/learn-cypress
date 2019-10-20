@@ -11,7 +11,7 @@ export class HomePageComponent implements OnInit {
 
   ngOnInit() {}
 
-  goToLogin() {
-    this.router.navigateByUrl('/login');
+  goToContentPage() {
+    this.router.navigateByUrl('/content');
   }
 }

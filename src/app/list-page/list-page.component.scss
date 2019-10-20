@@ -8,10 +8,6 @@
   align-items: center;
 }
 
-h1 {
-  margin: 1em;
-}
-
 .create-button {
   display: flex;
   justify-content: center;
@@ -22,9 +18,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  padding: 2em;
-  border: solid;
+  margin: 1em;
 }
 
 .back-button {
@@ -35,13 +29,17 @@ h1 {
 }
 
 .back-button > button {
-  width: 100%;
+  width: 10em;
 }
 
 .list-content {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
   margin: 1em;
+}
+
+.create-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

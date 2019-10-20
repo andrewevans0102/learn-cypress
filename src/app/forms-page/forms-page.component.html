@@ -1,7 +1,10 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <h1>Login Form</h1>
+      <h1 class="display-4">Forms Page</h1>
+      <p class="lead">
+        Show how cypress handles a login form!
+      </p>
     </div>
   </div>
   <div class="row">
@@ -15,6 +18,8 @@
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
             placeholder="Enter email"
+            [(ngModel)]="email"
+            name="email"
           />
         </div>
         <div class="form-group">
@@ -24,12 +29,23 @@
             class="form-control"
             id="exampleInputPassword1"
             placeholder="Password"
+            [(ngModel)]="password"
+            name="password"
           />
         </div>
       </form>
-      <button class="btn btn-primary" (click)="onSubmit()">
-        Submit
-      </button>
+      <div class="login-button">
+        <button
+          type="button"
+          class="btn btn-danger"
+          (click)="goToContentPage()"
+        >
+          Back
+        </button>
+        <button class="btn btn-primary" (click)="onSubmit()">
+          Submit
+        </button>
+      </div>
     </div>
   </div>
 </div>

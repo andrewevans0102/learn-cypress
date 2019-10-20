@@ -1,0 +1,11 @@
+.login-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+}
+
+.login-button > button {
+  width: 10em;
+  margin: 1em;
+}
