@@ -23,3 +23,12 @@
 //
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
+
+Cypress.Commands.add('start', () => {
+  cy.visit('/home-page');
+  cy.get('#startButton').click();
+  cy.get('h1').should('contain', 'Learn Cypress');
+  cy.get('#formsButton').should('contain', 'Forms');
+  cy.get('#listsButton').should('contain', 'Lists');
+  cy.get('#networkButton').should('contain', 'Network Requests');
+});
