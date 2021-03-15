@@ -1,14 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 
 @Component({
-  selector: 'app-list-page',
-  templateUrl: './list-page.component.html',
-  styleUrls: ['./list-page.component.scss']
+  selector: "app-list-page",
+  templateUrl: "./list-page.component.html",
+  styleUrls: ["./list-page.component.scss"],
 })
 export class ListPageComponent implements OnInit {
-  listValues = ['first item', 'second item', 'third item', 'fourth item'];
-  createValue: string;
+  listValues = ["first item", "second item", "third item", "fourth item"];
+  createValue: string = "";
 
   constructor(public router: Router) {}
 
@@ -26,6 +26,6 @@ export class ListPageComponent implements OnInit {
   }
 
   goToContentPage() {
-    this.router.navigateByUrl('/content');
+    this.router.navigateByUrl("/content");
   }
 }

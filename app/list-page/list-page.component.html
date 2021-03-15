@@ -1,0 +1,70 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1 class="display-4">List Page</h1>
+      <p class="lead">
+        Show how cypress handles lists!
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="create-form">
+        <form class="form-inline">
+          <div class="form-group">
+            <input
+              class="form-control"
+              id="createInput"
+              placeholder="Value"
+              [(ngModel)]="createValue"
+              name="createValue"
+            />
+          </div>
+          <div class="create-button">
+            <button
+              type="button"
+              class="btn btn-success"
+              (click)="create()"
+              id="createButton"
+            >
+              create value
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="list-content">
+        <ul class="list-group" *ngFor="let listValue of listValues">
+          <li class="list-group-item">
+            <div class="value-row">
+              <div class="value">{{ listValue }}</div>
+              <button
+                type="button"
+                class="btn btn-danger"
+                (click)="delete(listValue)"
+              >
+                Delete
+              </button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="back-button">
+        <button
+          type="button"
+          class="btn btn-danger"
+          (click)="goToContentPage()"
+        >
+          Back
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

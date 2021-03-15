@@ -1,0 +1,115 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1 class="display-4">Network Request Page</h1>
+      <p class="lead">
+        Show how cypress handles network requests by calling the
+        <a href="https://swapi.co/">Star Wars API</a>!
+      </p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <div class="movie-form">
+        <form>
+          <div class="form-group">
+            <label for="movieSelect">Select Movie</label>
+            <select
+              class="form-control"
+              id="movieSelect"
+              [(ngModel)]="selectedMovie"
+              name="selectedMovie"
+            >
+              <option>A New Hope (1)</option>
+              <option>The Empire Strikes Back (2)</option>
+              <option>Return of the Jedi (3)</option>
+            </select>
+          </div>
+          <div class="details-button">
+            <button
+              type="button"
+              class="btn btn-primary"
+              (click)="showDetails()"
+              id="detailsButton"
+            >
+              show details
+            </button>
+            <button
+              type="button"
+              class="btn btn-danger"
+              (click)="goToContentPage()"
+            >
+              Back
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="row" *ngIf="movieData !== undefined">
+    <div class="col">
+      <div class="list-group show-movie">
+        <div
+          class="list-group-item list-group-item-action flex-column align-items-start"
+        >
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Movie Title</h5>
+          </div>
+          <p class="mb-1" id="movieTitle">
+            {{ movieData.title }}
+          </p>
+        </div>
+        <div
+          class="list-group-item list-group-item-action flex-column align-items-start"
+        >
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Episode</h5>
+          </div>
+          <p class="mb-1" id="episodeNumber">
+            {{ movieData.episode_id }}
+          </p>
+        </div>
+        <div
+          class="list-group-item list-group-item-action flex-column align-items-start"
+        >
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Movie Intro</h5>
+          </div>
+          <p class="mb-1">
+            {{ movieData.opening_crawl }}
+          </p>
+        </div>
+        <div
+          class="list-group-item list-group-item-action flex-column align-items-start"
+        >
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Director</h5>
+          </div>
+          <p class="mb-1">
+            {{ movieData.director }}
+          </p>
+        </div>
+        <div
+          class="list-group-item list-group-item-action flex-column align-items-start"
+        >
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Producer</h5>
+          </div>
+          <p class="mb-1">
+            {{ movieData.producer }}
+          </p>
+        </div>
+        <div
+          class="list-group-item list-group-item-action flex-column align-items-start"
+        >
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">Release Date</h5>
+          </div>
+          <p class="mb-1">
+            {{ movieData.release_date }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

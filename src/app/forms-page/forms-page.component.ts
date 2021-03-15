@@ -1,27 +1,27 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { Router } from '@angular/router';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
-import { PopupComponent } from '../popup/popup.component';
+import { Component, OnInit, Input } from "@angular/core";
+import { Router } from "@angular/router";
+import { NgbModal } from "@ng-bootstrap/ng-bootstrap";
+import { PopupComponent } from "../popup/popup.component";
 
 @Component({
-  selector: 'app-forms-page',
-  templateUrl: './forms-page.component.html',
-  styleUrls: ['./forms-page.component.scss']
+  selector: "app-forms-page",
+  templateUrl: "./forms-page.component.html",
+  styleUrls: ["./forms-page.component.scss"],
 })
 export class FormsPageComponent implements OnInit {
-  email: string;
-  password: string;
+  email: string = "";
+  password: string = "";
   constructor(public router: Router, private modalService: NgbModal) {}
 
   ngOnInit() {}
 
   onSubmit() {
-    if (this.email === undefined || this.email === '') {
-      this.showMessage('please enter a email');
+    if (this.email === undefined || this.email === "") {
+      this.showMessage("please enter a email");
       return;
     }
-    if (this.password === undefined || this.password === '') {
-      this.showMessage('please enter a password');
+    if (this.password === undefined || this.password === "") {
+      this.showMessage("please enter a password");
       return;
     }
 
@@ -35,11 +35,11 @@ export class FormsPageComponent implements OnInit {
   }
 
   success() {
-    this.showMessage('login successful');
-    this.router.navigateByUrl('/content');
+    this.showMessage("login successful");
+    this.router.navigateByUrl("/content");
   }
 
   goToContentPage() {
-    this.router.navigateByUrl('/content');
+    this.router.navigateByUrl("/content");
   }
 }

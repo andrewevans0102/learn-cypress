@@ -1,0 +1,37 @@
+.form-content {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  padding: 2em;
+  border: solid;
+}
+
+.back-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em;
+}
+
+button {
+  margin: 1em;
+}
+
+.details-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.details-button > button {
+  width: 10em;
+}
+
+.show-movie {
+  margin: 1em;
+}
+
+.movie-form {
+  margin: 2em;
+}
